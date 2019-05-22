@@ -1,0 +1,116 @@
+/* Tested in Firefox 65 and Chrome 72 */
+
+/* Ensure everything has the same font */
+body, input, textarea, select {
+  font-family: sans-serif;
+  font-size: 1.rem;
+}
+ul {
+  list-style-type: none;
+  margin: 5;
+  padding: 50;
+  overflow: hidden;
+  background-color: #FFF;
+}
+
+li {
+  float: left;
+  
+}
+
+a {
+  display: block;
+  padding: 2px;
+  background-color: #fff;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+form {
+  /* Nicer shading and sizing */
+  background-color: #eee;
+  padding: 0.5rem;
+  /* Use border-box sizing to set width ignoring padding/border */
+  box-sizing: border-box;
+  /* Fix width of form and centre horizontally in page */
+  width: 40rem;
+  margin: auto;
+  /* Never be wider than the space available */
+  max-width: 100%;
+}
+
+/* Nicer spacing and sizing */
+fieldset {
+  margin-bottom: 0.5rem;
+}
+legend {
+  font-size: 90%;
+  font-weight: bold;
+}
+
+/* An element with class="form-group" usually containing a label/input pair */
+.form-group {
+  /* Display each pair on a new line taking upto the whole width -
+     i.e. present like a <div> element */
+  display: block;
+  /* Nicer spacing */
+  margin: 0.5rem;
+}
+
+/* A <label> element inside an element with class="form-group" */
+.form-group label {
+  /* Display labels inline with inputs -
+     but otherwise present them like a <div> element */
+  display: inline-block;
+  /* Use border-box sizing to set width ignoring padding/border */
+  box-sizing: border-box;
+  /* Set a minimum width to keep labels and inputs in line vertically */
+  min-width: 10rem;
+  /* Never be wider than the space available */
+  max-width: 100%;
+}
+
+/* A <textarea> element inside an element with class="form-group" */
+.form-group textarea {
+  /* Display each textarea on a new line -
+     i.e. present like a <div> element */
+  display: block;
+  /* Use border-box sizing to set width ignoring padding/border */
+  box-sizing: border-box;
+  /* Take the full width available */
+  width: 100%;
+}
+
+/* A <label> element inside an element with class="form-wrap" */
+.form-wrap label {
+  /* Add a bit of space to avoid touching the element below */
+  margin-bottom: 0.5rem;
+}
+
+/* A <label> element inside an element with class="form-inline" */
+.form-inline label {
+  /* Reset minimum width for multiple labels/inputs on one line */
+  min-width: 0;
+}
+
+/* Respond to smaller screens */
+@media only screen and (max-width: 620px) {
+
+  /* Put normally inline elements on a new line taking upto the whole width -
+     i.e. present like a <div> element */
+  .checkbox,
+  .prompt {
+    display: block;
+  }
+
+}

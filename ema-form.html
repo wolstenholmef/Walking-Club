@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>TT284 EMA Add Walk Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ema-form.css">
+  </head>
+  <body>
+  <ul>
+  <li><a href="default.asp">Home</a></li>
+  <li><a href="walks.asp">Walks</a></li>
+  <li><a href="news.asp">News</a></li>
+  <li><a href="events.asp">Events</a></li>
+  </ul>
+    <form action="http://students.open.ac.uk/mct/tt284/reflect/reflect.php" method="post">
+      <fieldset>
+        <legend>Add Walk</legend>
+        <div class="form-group">
+          <label for="Name of Walk">Walk Name:</label>
+          <input id="walk_name" name="walk_name" type="text">
+        </div>
+        <div class="form-group">
+          <label for="Date">Date: </label>
+          <input id="date" name="date" type="date">
+        </div>
+        <div class="form-group">
+          <label for="Start Time">Start Time: </label>
+          <input id="start_time" name="start_time" type="time">
+        </div>
+        <div class="form-group">
+          <label for="Meeting Point">Meeting Point: </label>
+          <input id="meeting_point" name="meeting_point" type="text">
+        </div>
+        <div class="form-group">
+          <label for="Distance in Miles">Distance in Miles: </label>
+          <input id="distance" name="distance" type="text">
+        </div>
+          <div class="form-group"> 
+          <label for="SessionID"> </label>
+          <input id="session_id" name="session_id" value="12345678-09ab-1111-cdef" type="hidden">
+          </div>
+      </fieldset>
+      <fieldset>
+        <legend>Status</legend>
+        <div class="form-group form-inline">
+          <span class="checkbox">
+            <input id="status_0" name="status" type="checkbox" value="Proposed">
+            <label for="status_0">Proposed</label>
+          </span>
+          <span class="checkbox">
+            <input id="status_1" name="status" type="checkbox" value="Approved">
+            <label for="status_1">Approved</label>
+          </span>
+          <span class="checkbox">
+            <input id="status_2" name="status" type="checkbox" value="Rejected">
+            <label for="status_2">Rejected</label>
+          </span>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Notes</legend>
+        <div class="form-group form-wrap">
+          <label>Notes or a short description of the walk: e.g. 'Grade A walk with steep hills'</label>
+          <textarea name="current_medication" rows="12" cols="50"></textarea>
+        </div>
+      </fieldset>
+      </form>
+  </body>
+</html>
