@@ -1,116 +1,81 @@
-/* Tested in Firefox 65 and Chrome 72 */
-
-/* Ensure everything has the same font */
-body, input, textarea, select {
-  font-family: sans-serif;
-  font-size: 1.rem;
-}
-ul {
-  list-style-type: none;
-  margin: 5;
-  padding: 50;
-  overflow: hidden;
-  background-color: #FFF;
-}
-
-li {
-  float: left;
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Add Walk</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ema-form.css">
+  </head>
+  <body>
+ <ul>
+     
+     <li id="ou-contact" ><a href="http://www.open.ac.uk/contact" data-translate="true" class="ou-ia-public" id="ou-public-contact">Contact Us</a> 
+     <a href="http://www.open.ac.uk/"> <img src="OULogo.png" alt="OU Logo"
+     style="float: left; width:140px;height:80px;"> </a>
+     <li class="ou-role-signin" id="ou-signin1"><a href="https://msds.open.ac.uk/signon/sams001.aspx" id="ou-signin2" data-translate="true">Sign in</a></li>
+     <li id="ou-myaccount" class="ou-header-remove">         <a href="https://msds.open.ac.uk/students/" data-translate="true">My Account</a> </li>            
+      </ul>  
+  <h1> Add New Walk </h1> 
+  <ul>
+  <li><a href="default.asp">Home</a></li>
+  <li><a href="walks.asp">Walks</a></li>
+  <li><a href="news.asp">News</a></li>
+  <li><a href="events.asp">Events</a></li>
+  </ul>
   
-}
-
-a {
-  display: block;
-  padding: 2px;
-  background-color: #fff;
-}
-
-li a {
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: #111;
-}
-form {
-  /* Nicer shading and sizing */
-  background-color: #eee;
-  padding: 0.5rem;
-  /* Use border-box sizing to set width ignoring padding/border */
-  box-sizing: border-box;
-  /* Fix width of form and centre horizontally in page */
-  width: 40rem;
-  margin: auto;
-  /* Never be wider than the space available */
-  max-width: 100%;
-}
-
-/* Nicer spacing and sizing */
-fieldset {
-  margin-bottom: 0.5rem;
-}
-legend {
-  font-size: 90%;
-  font-weight: bold;
-}
-
-/* An element with class="form-group" usually containing a label/input pair */
-.form-group {
-  /* Display each pair on a new line taking upto the whole width -
-     i.e. present like a <div> element */
-  display: block;
-  /* Nicer spacing */
-  margin: 0.5rem;
-}
-
-/* A <label> element inside an element with class="form-group" */
-.form-group label {
-  /* Display labels inline with inputs -
-     but otherwise present them like a <div> element */
-  display: inline-block;
-  /* Use border-box sizing to set width ignoring padding/border */
-  box-sizing: border-box;
-  /* Set a minimum width to keep labels and inputs in line vertically */
-  min-width: 10rem;
-  /* Never be wider than the space available */
-  max-width: 100%;
-}
-
-/* A <textarea> element inside an element with class="form-group" */
-.form-group textarea {
-  /* Display each textarea on a new line -
-     i.e. present like a <div> element */
-  display: block;
-  /* Use border-box sizing to set width ignoring padding/border */
-  box-sizing: border-box;
-  /* Take the full width available */
-  width: 100%;
-}
-
-/* A <label> element inside an element with class="form-wrap" */
-.form-wrap label {
-  /* Add a bit of space to avoid touching the element below */
-  margin-bottom: 0.5rem;
-}
-
-/* A <label> element inside an element with class="form-inline" */
-.form-inline label {
-  /* Reset minimum width for multiple labels/inputs on one line */
-  min-width: 0;
-}
-
-/* Respond to smaller screens */
-@media only screen and (max-width: 620px) {
-
-  /* Put normally inline elements on a new line taking upto the whole width -
-     i.e. present like a <div> element */
-  .checkbox,
-  .prompt {
-    display: block;
-  }
-
-}
+    <form action="http://students.open.ac.uk/mct/tt284/reflect/reflect.php" method="post">
+      <fieldset>
+        <legend>Add Walk</legend>
+        <div class="form-group">
+          <label for="Name of Walk">Walk Name:</label>
+          <input id="walk_name" name="walk_name" type="text">
+        </div>
+        <div class="form-group">
+          <label for="Date">Date: </label>
+          <input id="date" name="date" type="date">
+        </div>
+        <div class="form-group">
+          <label for="Start Time">Start Time: </label>
+          <input id="start_time" name="start_time" type="time">
+        </div>
+        <div class="form-group">
+          <label for="Meeting Point">Meeting Point: </label>
+          <input id="meeting_point" name="meeting_point" type="text">
+        </div>
+        <div class="form-group">
+          <label for="Distance in Miles">Distance in Miles: </label>
+          <input id="distance" name="distance" type="text">
+        </div>
+          <div class="form-group"> 
+          <label for="SessionID"> </label>
+          <input id="session_id" name="session_id" value="12345678-09ab-1111-cdef" type="hidden">
+          </div>
+      </fieldset>
+      <fieldset>
+        <legend>Status</legend>
+        <div class="form-group form-inline">
+          <span class="checkbox">
+            <input id="status_0" name="status" type="checkbox" value="Proposed">
+            <label for="status_0">Proposed</label>
+          </span>
+          <span class="checkbox">
+            <input id="status_1" name="status" type="checkbox" value="Approved">
+            <label for="status_1">Approved</label>
+          </span>
+          <span class="checkbox">
+            <input id="status_2" name="status" type="checkbox" value="Rejected">
+            <label for="status_2">Rejected</label>
+          </span>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Notes</legend>
+        <div class="form-group form-wrap">
+          <label>Notes or a short description of the walk: e.g. 'Grade A walk with steep hills'</label>
+          <textarea name="current_medication" rows="12" cols="50"></textarea>
+        </div>
+      </fieldset>
+        <input type="submit" value="Submit">
+      </form>
+  </body>
+</html>
