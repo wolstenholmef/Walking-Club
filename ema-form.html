@@ -7,25 +7,38 @@
     <link rel="stylesheet" href="ema-form.css">
   </head>
   <body>
-      <a href="http://www.open.ac.uk/"> 
+  <a href="http://www.open.ac.uk/"> 
      <img src="OULogo.png" alt="OU Logo"
      style="float: left; width:140px;height:80px; margin-right: 350px"> </a>
- <ul> 
+<ul class="contact-menu"> 
      
      <li id="ou-contact" ><a href="http://www.open.ac.uk/contact" data-translate="true" class="ou-ia-public" id="ou-public-contact">Contact Us</a></li>
      
      <li class="ou-role-signin" id="ou-signin1"><a href="https://msds.open.ac.uk/signon/sams001.aspx" id="ou-signin2" data-translate="true">Sign in</a></li>
      <li id="ou-myaccount" class="ou-header-remove">         <a href="https://msds.open.ac.uk/students/" data-translate="true">My Account</a> </li>            
-      </ul>  
-     
+      </ul>
+      
+    <form>
+    <nav id="menu" aria-label="main menu"> 
+      <ul class="main-menu">
+        <li>
+          <a href="home.html">Home</a>
+        </li>
+        <li>
+          <a href="walks.html">Walks</a>
+        </li>
+        <li>
+          <a href="news.html">News</a>
+        </li>
+        <li>
+          <a href="events.html">Events</a>
+        </li>
+      </ul>
+    </nav>
+  </form> 
+      
+      
   <h1> Add New Walk </h1> 
-  <ul>
-  <li><a href="default.asp">Home</a></li>
-  <li><a href="walks.asp">Walks</a></li>
-  <li><a href="news.asp">News</a></li>
-  <li><a href="events.asp">Events</a></li>
-  </ul>
-  
     <form action="http://students.open.ac.uk/mct/tt284/reflect/reflect.php" method="post">
       <fieldset>
         <legend>Add Walk</legend>
@@ -79,5 +92,8 @@
       </fieldset>
         <input type="submit" value="Submit">
       </form>
+      <footer>
+    <div id="copyright">Copyright OU Walking Club 2019</div>
+  </footer>
   </body>
 </html>
