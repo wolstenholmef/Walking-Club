@@ -50,6 +50,7 @@ li a {
   text-decoration: none;
   align-content: center;
   max-width: 100%;
+  white-space: nowrap;
 }
 
 li a:hover {
@@ -154,7 +155,7 @@ legend {
 }
 
 /* Respond to smaller screens */
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 400px) {
 
   .checkbox,
   .prompt {
@@ -165,7 +166,7 @@ legend {
   color: white;
   padding: 12px 20px;
   border: none;
-  width: 20rem;        
+  width: 10rem;        
   border-radius: 4px;
   cursor: pointer;
     }
@@ -173,7 +174,36 @@ legend {
   #menu {
     display: block;
       width: 20rem;
+      
   }
+
+    li {
+    margin-right: 2px;
+    width: calc(96% / 6);
+    float: center;
+    
+  }
+
+  li ul li {
+    margin-left: 8px;
+    width: 100%;
+    float: center;
+      
+  }
+
+  li:hover > ul {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    float: none;
+    overflow: visible;
+    font-size: 8px;
+  }
+    .contact-menu
+    {
+        font-size: 10px;
+       
+    }
 
 }
 
@@ -213,7 +243,7 @@ legend {
     background-color: white;
     float: center;
     width: 100%;
-    top: 4px;
+    top: 2px;
   }
 
 }
