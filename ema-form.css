@@ -7,39 +7,46 @@ h1 {
     
 }
 
-
-body, input, textarea, select {
+body {
   font-family: sans-serif;
   font-size: 1.rem;
   color: black;
     
 }
+
+
 ul {
   list-style-type: none;
-  padding: 500;
-  overflow: hidden;
+  padding: 10px;
+  position: inherit;
+  overflow: auto;
   background-color: #FFF;
-  text-align: right; 
+  text-align: center; 
   max-width: 100%;
 }
 
 li {
-  float:left;
+  float: center;
+  position: inherit;
   text-align: center;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
   
 }
 
 a {
   display: block;
-  padding: 8px;
+  padding: 3px;
+  text-align: center;
   background-color: #fff;
 }
 
 li a {
-  display: flex; 
+  display: inline-block; 
   color: black;
   text-align: center;
-  padding: 14px 16px;
+  padding: 16px 16px;
   text-decoration: none;
   align-content: center;
   max-width: 100%;
@@ -47,16 +54,22 @@ li a {
 
 li a:hover {
   background-color: blue;
+  opacity: 10%
+}
+.contact-menu {
+    text-align: center;
+    display: block;
+    
 }
 
 form {
   /* Nicer shading and sizing */
   background-color: #eed;
-  padding: 0.5rem;
+  padding: 0.2rem;
+  width: 60rem;
   /* Use border-box sizing to set width ignoring padding/border */
-  box-sizing: border-box;
+  box-sizing: content-box;
   /* Fix width of form and centre horizontally in page */
-  width: 40rem;
   margin: auto;
   /* Never be wider than the space available */
   max-width: 100%;
@@ -64,11 +77,12 @@ form {
 
 /* Nicer spacing and sizing */
 fieldset {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 legend {
   font-size: 90%;
   font-weight: bold;
+  font-family: sans-serif;
 }
 
 /* An element with class="form-group" usually containing a label/input pair */
@@ -77,8 +91,9 @@ legend {
      i.e. present like a <div> element */
   display: block;
   /* Nicer spacing */
-  margin: 0.5rem;
+  margin: 1.8rem;
 }
+
 
 /* A <label> element inside an element with class="form-group" */
 .form-group label {
@@ -88,7 +103,7 @@ legend {
   /* Use border-box sizing to set width ignoring padding/border */
   box-sizing: border-box;
   /* Set a minimum width to keep labels and inputs in line vertically */
-  min-width: 10rem;
+  min-width: 15rem;
   /* Never be wider than the space available */
   max-width: 100%;
 }
@@ -97,11 +112,33 @@ legend {
 .form-group textarea {
   /* Display each textarea on a new line -
      i.e. present like a <div> element */
-  display: block;
-  /* Use border-box sizing to set width ignoring padding/border */
+  display: inline-block;
+  text-align: center;
   box-sizing: border-box;
-  /* Take the full width available */
   width: 100%;
+}
+
+#menu {
+  background-color: white;
+  display: contents;
+  border: none;
+  float: center; 
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  padding: none;
+}
+
+.main-menu {
+    text-align: center;
+    width: 100%;
+}
+
+#copyright {
+  background-color: lightblue;
+  color: #080b61;
+  clear: both;
+  margin: 20px;
 }
 
 /* A <label> element inside an element with class="form-wrap" */
@@ -117,10 +154,8 @@ legend {
 }
 
 /* Respond to smaller screens */
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 375px) {
 
-  /* Put normally inline elements on a new line taking upto the whole width -
-     i.e. present like a <div> element */
   .checkbox,
   .prompt {
     display: block;
@@ -130,7 +165,55 @@ legend {
   color: white;
   padding: 12px 20px;
   border: none;
+  width: 20rem;        
   border-radius: 4px;
   cursor: pointer;
+    }
+    
+  #menu {
+    display: block;
+      width: 20rem;
+  }
+
+}
+
+/*Respond to computer screens - larger */
+@media only screen and (min-width: 1000px) {
+  .display-menu {
+    display: block;
+  }
+  input[type=submit] {
+  background-color: lightblue;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+    }
+    
+  #extra-column {
+    width: 100%;
+    float: center;
+    top: 4px;
+    display: inline;
+    max-width: 320px;
+  }
+
+  .extra-column-content {
+    display: inline;
+  }
+
+  #menu {
+    display: block;
+    background-color: white;
+    float: center;
+    width: 100%;
+  }
+  .main-content {
+    background-color: white;
+    float: center;
+    width: 100%;
+    top: 4px;
+  }
 
 }
